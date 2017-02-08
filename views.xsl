@@ -34,7 +34,7 @@
                 <li class="list-group-item">
                   <strong>Title DE</strong>
                   &#160;
-                  <span><xsl:value-of select="help[@lang='de']"/></span>
+                  <span><xsl:value-of select="title[@lang='de']"/></span>
                 </li>
                 <li class="list-group-item">
                   <strong>Help EN</strong>
@@ -44,7 +44,7 @@
                 <li class="list-group-item">
                   <strong>Help DE</strong>
                   &#160;
-                  <span><xsl:value-of select="text[@lang='de']"/></span>
+                  <span><xsl:value-of select="help[@lang='de']"/></span>
                 </li>
                 <li class="list-group-item">
                   <strong>Template</strong>
