@@ -7,7 +7,7 @@
       <link href="http://rdmorganiser.github.io/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
       <link href="http://rdmorganiser.github.io/css/style.css" media="screen" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body style="background-color:white">
       <div class="container">
         <div class="page">
           <h1>Conditions</h1>
@@ -24,7 +24,12 @@
                 <li class="list-group-item">
                   <strong>Comment</strong>
                   &#160;
-                  <span><xsl:value-of select="source/@dc:comment"/></span>
+                  <span><xsl:value-of select="dc:comment"/></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Source</strong>
+                  &#160;
+                  <span><xsl:value-of select="source/@dc:uri"/></span>
                 </li>
                 <li class="list-group-item">
                   <strong>Relation</strong>
