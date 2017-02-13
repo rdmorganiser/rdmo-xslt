@@ -44,13 +44,43 @@
               </ul>
             </div>
 
-          </xsl:for-each>
+            <xsl:for-each select="sections/section">
 
-          <xsl:for-each select="catalogs/catalog/sections/section">
+              <div class="panel panel-default" style="margin-left:80px">
+                <div class="panel-heading">
+                  <strong>Section</strong>
+                  &#160;
+                  <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
+                </div>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                  <strong>Comment</strong>
+                  &#160;
+                  <span><xsl:value-of select="dc:comment"/></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Order</strong>
+                  &#160;
+                  <span><xsl:value-of select="order"/></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Title EN</strong>
+                  &#160;
+                  <span><xsl:value-of select="title[@lang='en']"/></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Title DE</strong>
+                  &#160;
+                  <span><xsl:value-of select="title[@lang='de']"/></span>
+                </li>
+              </ul>
+            </div>
 
-            <div class="panel panel-default" style="margin-left:40px">
+          <xsl:for-each select="subsections/subsection">
+
+            <div class="panel panel-default" style="margin-left:120px">
               <div class="panel-heading">
-                <strong>Section</strong>
+                <strong>Subsection</strong>
                 &#160;
                 <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
               </div>
@@ -78,188 +108,154 @@
             </ul>
           </div>
 
-        </xsl:for-each>
+          <xsl:for-each select="entities/question">
 
-        <xsl:for-each select="catalogs/catalog/sections/section/subsections/subsection">
-
-          <div class="panel panel-default" style="margin-left:80px">
-            <div class="panel-heading">
-              <strong>Subsection</strong>
-              &#160;
-              <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
-            </div>
-            <ul class="list-group">
+            <div class="panel panel-default" style="margin-left:160px">
+              <div class="panel-heading">
+                <strong>Question</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                <strong>Comment</strong>
+                &#160;
+                <span><xsl:value-of select="dc:comment"/></span>
+              </li>
               <li class="list-group-item">
-              <strong>Comment</strong>
-              &#160;
-              <span><xsl:value-of select="dc:comment"/></span>
-            </li>
-            <li class="list-group-item">
-              <strong>Order</strong>
-              &#160;
-              <span><xsl:value-of select="order"/></span>
-            </li>
-            <li class="list-group-item">
-              <strong>Title EN</strong>
-              &#160;
-              <span><xsl:value-of select="title[@lang='en']"/></span>
-            </li>
-            <li class="list-group-item">
-              <strong>Title DE</strong>
-              &#160;
-              <span><xsl:value-of select="title[@lang='de']"/></span>
-            </li>
-          </ul>
-        </div>
-
-      </xsl:for-each>
-
-      <xsl:for-each select="catalogs/catalog/sections/section/subsections/subsection/entities/question">
-
-        <div class="panel panel-default" style="margin-left:120px">
-          <div class="panel-heading">
-            <strong>Question</strong>
-            &#160;
-            <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
+                <strong>Order</strong>
+                &#160;
+                <span><xsl:value-of select="order"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Text EN</strong>
+                &#160;
+                <span><xsl:value-of select="text[@lang='en']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Text DE</strong>
+                &#160;
+                <span><xsl:value-of select="text[@lang='de']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help EN</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='en']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help DE</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='de']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Widget Type</strong>
+                &#160;
+                <span><xsl:value-of select="widget_type"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Attribute Entity</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
+              </li>
+            </ul>
           </div>
-          <ul class="list-group">
-            <li class="list-group-item">
-            <strong>Comment</strong>
-            &#160;
-            <span><xsl:value-of select="dc:comment"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Order</strong>
-            &#160;
-            <span><xsl:value-of select="order"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Text EN</strong>
-            &#160;
-            <span><xsl:value-of select="text[@lang='en']"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Text DE</strong>
-            &#160;
-            <span><xsl:value-of select="text[@lang='de']"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Help EN</strong>
-            &#160;
-            <span><xsl:value-of select="help[@lang='en']"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Help DE</strong>
-            &#160;
-            <span><xsl:value-of select="help[@lang='de']"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Widget Type</strong>
-            &#160;
-            <span><xsl:value-of select="widget_type"/></span>
-          </li>
-          <li class="list-group-item">
-            <strong>Attribute Entity</strong>
-            &#160;
-            <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
-          </li>
-        </ul>
-      </div>
 
-    </xsl:for-each>
+        </xsl:for-each> <!--questions-->
 
-    <xsl:for-each select="catalogs/catalog/sections/section/subsections/subsection/entities/questionset">
+          <xsl:for-each select="entities/questionset">
 
-      <div class="panel panel-default" style="margin-left:120px">
-        <div class="panel-heading">
-          <strong>Question Set</strong>
-          &#160;
-          <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">
-          <strong>Comment</strong>
-          &#160;
-          <span><xsl:value-of select="dc:comment"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Order</strong>
-          &#160;
-          <span><xsl:value-of select="order"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Help EN</strong>
-          &#160;
-          <span><xsl:value-of select="help[@lang='en']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Help DE</strong>
-          &#160;
-          <span><xsl:value-of select="help[@lang='de']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Attribute Entity</strong>
-          &#160;
-          <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
-        </li>
-      </ul>
-    </div>
+            <div class="panel panel-default" style="margin-left:160px">
+              <div class="panel-heading">
+                <strong>Question Set</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                <strong>Comment</strong>
+                &#160;
+                <span><xsl:value-of select="dc:comment"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Order</strong>
+                &#160;
+                <span><xsl:value-of select="order"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help EN</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='en']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help DE</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='de']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Attribute Entity</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
+              </li>
+            </ul>
+          </div>
 
-    </xsl:for-each>
+          <xsl:for-each select="questions/question">
 
-    <xsl:for-each select="catalogs/catalog/sections/section/subsections/subsection/entities/questionset/questions/question">
+            <div class="panel panel-default" style="margin-left:200px">
+              <div class="panel-heading">
+                <strong>Question</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                <strong>Comment</strong>
+                &#160;
+                <span><xsl:value-of select="dc:comment"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Order</strong>
+                &#160;
+                <span><xsl:value-of select="order"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Text EN</strong>
+                &#160;
+                <span><xsl:value-of select="text[@lang='en']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Text DE</strong>
+                &#160;
+                <span><xsl:value-of select="text[@lang='de']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help EN</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='en']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Help DE</strong>
+                &#160;
+                <span><xsl:value-of select="help[@lang='de']"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Widget Type</strong>
+                &#160;
+                <span><xsl:value-of select="widget_type"/></span>
+              </li>
+              <li class="list-group-item">
+                <strong>Attribute Entity</strong>
+                &#160;
+                <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
+              </li>
+            </ul>
+          </div>
 
-      <div class="panel panel-default" style="margin-left:160px">
-        <div class="panel-heading">
-          <strong>Question</strong>
-          &#160;
-          <span><a href=""><xsl:value-of select="dc:uri"/></a></span>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">
-          <strong>Comment</strong>
-          &#160;
-          <span><xsl:value-of select="dc:comment"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Order</strong>
-          &#160;
-          <span><xsl:value-of select="order"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Text EN</strong>
-          &#160;
-          <span><xsl:value-of select="text[@lang='en']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Text DE</strong>
-          &#160;
-          <span><xsl:value-of select="text[@lang='de']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Help EN</strong>
-          &#160;
-          <span><xsl:value-of select="help[@lang='en']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Help DE</strong>
-          &#160;
-          <span><xsl:value-of select="help[@lang='de']"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Widget Type</strong>
-          &#160;
-          <span><xsl:value-of select="widget_type"/></span>
-        </li>
-        <li class="list-group-item">
-          <strong>Attribute Entity</strong>
-          &#160;
-          <span><a href=""><xsl:value-of select="attribute_entity/@dc:uri"/></a></span>
-        </li>
-      </ul>
-    </div>
-
-    </xsl:for-each>
+        </xsl:for-each> <!--questions in questionsets-->
+        </xsl:for-each> <!--questionsets-->
+        </xsl:for-each> <!--subsection-->
+        </xsl:for-each> <!--section-->
+      </xsl:for-each> <!--catalog-->
 
           </div>
       </div>
