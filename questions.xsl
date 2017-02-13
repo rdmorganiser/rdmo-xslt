@@ -46,7 +46,7 @@
 
             <xsl:for-each select="sections/section">
 
-              <div class="panel panel-default" style="margin-left:80px">
+              <div class="panel panel-default" style="margin-left:20px">
                 <div class="panel-heading">
                   <strong>Section</strong>
                   &#160;
@@ -78,7 +78,7 @@
 
           <xsl:for-each select="subsections/subsection">
 
-            <div class="panel panel-default" style="margin-left:120px">
+            <div class="panel panel-default" style="margin-left:40px">
               <div class="panel-heading">
                 <strong>Subsection</strong>
                 &#160;
@@ -110,7 +110,7 @@
 
           <xsl:for-each select="entities/question">
 
-            <div class="panel panel-default" style="margin-left:160px">
+            <div class="panel panel-default" style="margin-left:60px">
               <div class="panel-heading">
                 <strong>Question</strong>
                 &#160;
@@ -164,7 +164,7 @@
 
           <xsl:for-each select="entities/questionset">
 
-            <div class="panel panel-default" style="margin-left:160px">
+            <div class="panel panel-default" style="margin-left:60px">
               <div class="panel-heading">
                 <strong>Question Set</strong>
                 &#160;
@@ -201,7 +201,7 @@
 
           <xsl:for-each select="questions/question">
 
-            <div class="panel panel-default" style="margin-left:200px">
+            <div class="panel panel-default" style="margin-left:80px">
               <div class="panel-heading">
                 <strong>Question</strong>
                 &#160;
